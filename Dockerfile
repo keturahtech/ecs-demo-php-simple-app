@@ -5,7 +5,7 @@ RUN yum update -y && \
  yum install -y httpd
 
 # Write hello world message
-COPY index.html /var/www/html/
+COPY src/index.html /var/www/html/
 
 # Configure Apache
 RUN echo 'mkdir -p /var/run/httpd' >> /root/run_apache.sh && \
